@@ -1,0 +1,13 @@
+mvt pattern
+2003 - 2005 BSD license - publically available.
+
+Create project
+django-admin startproject demo
+
+
+project structure
+-   __init__.py -> used for python package.
+-   wsgi.py -> provide standards for synchronous app.
+               web server communication with web app.
+-   asgi.py -> provide standards for synchronous and asynchronous app.
+-   settings.py ->           
