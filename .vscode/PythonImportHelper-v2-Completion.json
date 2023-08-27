@@ -40,6 +40,38 @@
         "documentation": {}
     },
     {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "views",
+        "importPath": "book",
+        "description": "book",
+        "isExtraImport": true,
+        "detail": "book",
+        "documentation": {}
+    },
+    {
         "label": "render",
         "importPath": "django.shortcuts",
         "description": "django.shortcuts",
@@ -90,27 +122,11 @@
         "documentation": {}
     },
     {
-        "label": "path",
-        "importPath": "django.urls",
-        "description": "django.urls",
+        "label": "urls",
+        "importPath": "demo.book",
+        "description": "demo.book",
         "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "include",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "views",
-        "importPath": "book",
-        "description": "book",
-        "isExtraImport": true,
-        "detail": "book",
+        "detail": "demo.book",
         "documentation": {}
     },
     {
@@ -140,11 +156,20 @@
         "documentation": {}
     },
     {
-        "label": "book",
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "demo.book.urls",
+        "description": "demo.book.urls",
+        "peekOfCode": "urlpatterns = [\n    path(\"\",views.get_book)\n]",
+        "detail": "demo.book.urls",
+        "documentation": {}
+    },
+    {
+        "label": "get_book",
         "kind": 2,
         "importPath": "demo.book.views",
         "description": "demo.book.views",
-        "peekOfCode": "def book(request):\n    return HttpResponse('{\"message\":\"created first url path\"}')",
+        "peekOfCode": "def get_book(request):\n    return HttpResponse('{\"message\":\"created first url path and url file in app\"}')",
         "detail": "demo.book.views",
         "documentation": {}
     },
@@ -315,7 +340,7 @@
         "kind": 5,
         "importPath": "demo.demo.urls",
         "description": "demo.demo.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"book/\", views.book)\n]",
+        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"book/\", include(urls))\n]",
         "detail": "demo.demo.urls",
         "documentation": {}
     },
